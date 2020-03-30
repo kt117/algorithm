@@ -1,3 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+typedef pair<ll, ll> P;
+const ll MOD = 1e9+7;
+const ll INF = 1e18;
+#define rep(i,m,n) for(ll i = (m); i <= (n); i++)
+#define zep(i,m,n) for(ll i = (m); i < (n); i++)
+#define rrep(i,m,n) for(ll i = (m); i >= (n); i--)
+#define print(x) cout << (x) << endl;
+#define printa(x,m,n) for(ll i = (m); i <= n; i++){cout << (x[i]) << " ";} cout<<endl;
+
 struct union_find{
 	vector<int> rnk, par;
 	
@@ -32,3 +44,21 @@ struct union_find{
 		return find(x) == find(y);
 	}
 };
+
+int main(){
+    cin.tie(0); ios::sync_with_stdio(false);
+    
+    ll n, q, p, a, b;
+    cin >> n >> q;
+    union_find u(n);
+    zep(i, 0, q){
+        cin >> p >> a >> b;
+        if(p){
+            print((u.same(a, b))? "Yes" : "No")
+        }
+        else{
+            u.unite(a, b);
+        }
+    }
+    return 0;
+}
