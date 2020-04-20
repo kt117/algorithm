@@ -2,7 +2,8 @@
 
 | name | verify |
 ----|----
-| union find | https://atcoder.jp/contests/atc001/tasks/unionfind_a |
+| union_find_rank | https://atcoder.jp/contests/atc001/tasks/unionfind_a |
+| union_find_size | https://codeforces.com/contest/1213/problem/G |
 | rerouting | https://atcoder.jp/contests/abc160/tasks/abc160_f |
 | warshall_floid |  |
 | dijkstra |  |
