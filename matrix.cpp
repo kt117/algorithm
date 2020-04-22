@@ -51,17 +51,48 @@ template<typename T> Matrix<T> pow(const Matrix<T> &A, long long x) {
 }
 
 
+struct ModInt {
+    long long v;
+    //static long long MOD;
+    
+    ModInt (long long v) : v((v % MOD + MOD) % MOD) {}
+
+    ModInt& operator += (const ModInt a) {v += a.v; v %= MOD; return *this;}
+    ModInt& operator *= (const ModInt a) {v *= a.v; v %= MOD; return *this;}
+
+    ModInt operator + (const ModInt a) const {return ModInt(*this) += a;}
+    ModInt operator * (const ModInt a) const {return ModInt(*this) *= a;}
+
+    //ostream
+};
+
+
+/*
+行列累乗, ModInt
+verify: https://atcoder.jp/contests/dp/tasks/dp_r
+
+TODO: 入出力を整える
+*/
+
 int main(){
     cin.tie(0); ios::sync_with_stdio(false);
     
-    Matrix<ll> a({{1, 0}, {0, 1}});
-    Matrix<ll> b({{1, 2}, {3, 4}});
-    auto c = a * b;
-    c = pow(c, 2);
-    zep(i, 0, 2){
-        zep(j, 0, 2)cout << c[i][j] << " ";
-
-        cout << endl;
+    ll n, k; cin >> n >> k;
+    Matrix<ModInt> a(n, n, 0);
+    zep(i, 0, n){
+        zep(j, 0, n){
+            ll buf; cin >> buf;
+            a[i][j] = buf;
+        }
     }
+
+    auto res = pow(a, k);
+    ModInt ans = 0;
+    zep(i, 0, n){
+        zep(j, 0, n){
+            ans += res[i][j];
+        }
+    }
+    print(ans.v)
     return 0;
 }
