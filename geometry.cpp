@@ -11,6 +11,12 @@ const ll INF = 1e18;
 #define printa(x,m,n) for(ll i = (m); i <= n; i++){cout << (x[i]) << " ";} cout<<endl;
 
 
+/*
+最小包含円, CCW, 交点, 外心
+verify: https://atcoder.jp/contests/abc151/tasks/abc151_f
+*/
+
+
 const double EPS = 1e-10;
 const double PI = acosl(-1.0);
 

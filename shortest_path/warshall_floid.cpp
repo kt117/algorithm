@@ -19,6 +19,7 @@ void warshall_floid(){
                 dst[i][j] = min(dst[i][k]+dst[k][j], dst[i][j]);
 }
 
+
 int main() {
     cin >> n >> m >> r;
     for(ll i = 0; i < r; i++)cin >> R[i];

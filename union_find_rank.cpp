@@ -10,6 +10,12 @@ const ll INF = 1e18;
 #define print(x) cout << (x) << endl;
 #define printa(x,m,n) for(ll i = (m); i <= n; i++){cout << (x[i]) << " ";} cout<<endl;
 
+
+/*
+verify: https://atcoder.jp/contests/atc001/tasks/unionfind_a
+*/
+
+
 struct union_find{
     vector<int> rnk, par;
     
@@ -44,6 +50,7 @@ struct union_find{
         return find(x) == find(y);
     }
 };
+
 
 int main(){
     cin.tie(0); ios::sync_with_stdio(false);

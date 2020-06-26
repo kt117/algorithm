@@ -10,10 +10,12 @@ const ll INF = 1e18;
 #define print(x) cout << (x) << endl;
 #define printa(x,m,n) for(int i = (m); i <= n; i++){cout << (x[i]) << " ";} cout<<endl;
 
+
 /*
 verify: https://atcoder.jp/contests/abc164/tasks/abc164_e
 reference: プログラミングコンテストチャレンジブック [第2版]
 */
+
 
 struct dijkstra{
     vector<long long> min_dst;

@@ -40,6 +40,7 @@ struct bellman_fold{//1-origin
     bool loop(){return negative_loop;}
 };
 
+
 ll n, m, p, a, b, c;
 
 int main(){
@@ -49,7 +50,7 @@ int main(){
     bellman_fold bf(n);
     rep(i, 1, n){
         cin >> a >> b >> c;
-        bf.append(a, b, -c+p);
+        bf.append(a, b, -c + p);
     }
     bf.run(1);
     

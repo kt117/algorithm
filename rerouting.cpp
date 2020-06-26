@@ -10,6 +10,12 @@ const ll INF = 1e18;
 #define print(x) cout << (x) << endl;
 #define printa(x,m,n) for(ll i = (m); i <= n; i++){cout << (x[i]) << " ";} cout<<endl;
 
+
+/*
+verify: https://atcoder.jp/contests/abc160/tasks/abc160_f
+*/
+
+
 ll n;
 vector<vector<ll>> g, dp;
 
@@ -55,6 +61,7 @@ void dfs2(ll at, ll from = -1, vector<ll> x = ide()){
         }
     }
 }
+
 
 int main(){
     cin.tie(0); ios::sync_with_stdio(false);

@@ -11,6 +11,14 @@ const ll INF = 1e18;
 #define printa(x,m,n) for(int i = (m); i <= n; i++){cout << (x[i]) << " ";} cout<<endl;
 
 
+/*
+行列累乗, ModInt
+verify: https://atcoder.jp/contests/dp/tasks/dp_r
+
+TODO: 入出力を整える
+*/
+
+
 template<typename T> struct Matrix {
     vector<vector<T>> A;
 
@@ -66,13 +74,6 @@ struct ModInt {
     //ostream
 };
 
-
-/*
-行列累乗, ModInt
-verify: https://atcoder.jp/contests/dp/tasks/dp_r
-
-TODO: 入出力を整える
-*/
 
 int main(){
     cin.tie(0); ios::sync_with_stdio(false);
