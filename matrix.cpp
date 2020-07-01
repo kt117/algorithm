@@ -13,7 +13,10 @@ const ll INF = 1e18;
 
 /*
 行列累乗, ModInt
-verify: https://atcoder.jp/contests/dp/tasks/dp_r
+
+verify
+- https://atcoder.jp/contests/dp/tasks/dp_r
+- https://codeforces.com/contest/1117/problem/D
 
 TODO: 入出力を整える
 */
